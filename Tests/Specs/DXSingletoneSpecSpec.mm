@@ -5,6 +5,8 @@
 using namespace Cedar::Matchers;
 
 #import "DXSingletone.h"
+#import "DXSingletoneHolder.h"
+
 
 @interface SingletoneTestClass : NSObject <DXSingletone>
 
@@ -33,6 +35,16 @@ describe(@"DXSingletone", ^{
         SingletoneTestClass *instanceA = [SingletoneTestClass shared];
         
         [SingletoneTestClass destroySharedInstance];
+        
+        SingletoneTestClass *instanceB = [SingletoneTestClass shared];
+        
+        assertThat(instanceA, isNot(equalTo(instanceB)));
+    });
+    
+    it(@"Should create new shared instance after destroying all old instances", ^{
+        SingletoneTestClass *instanceA = [SingletoneTestClass shared];
+        
+        [[DXSingletoneHolder shared] destroyAll];
         
         SingletoneTestClass *instanceB = [SingletoneTestClass shared];
         
