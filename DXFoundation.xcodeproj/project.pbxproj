@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70A7348EE5EA4986B1A5FCC9 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA019E918D2A46239684F64B /* libPods-Tests.a */; };
+		AD80969715CC1299004BE9EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD80969615CC1299004BE9EC /* UIKit.framework */; };
+		AD80969815CC1299004BE9EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
+		AD80969A15CC1299004BE9EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD80969915CC1299004BE9EC /* CoreGraphics.framework */; };
+		AD8096A015CC1299004BE9EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD80969E15CC1299004BE9EC /* InfoPlist.strings */; };
+		AD8096A215CC1299004BE9EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8096A115CC1299004BE9EC /* main.m */; };
+		AD8096B615CC1318004BE9EC /* DXSingletoneHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */; };
+		AD8096B815CC131B004BE9EC /* NSObject+DXSingletone.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */; };
+		AD8096BB15CC137B004BE9EC /* DXSingletoneSpecSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8096BA15CC137B004BE9EC /* DXSingletoneSpecSpec.mm */; };
 		AD8FF66215CBF53500BFB572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
 		AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD8FF66615CBF53500BFB572 /* DXFoundation.h */; };
 		AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF66815CBF53500BFB572 /* DXFoundation.m */; };
+		AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingletone.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */; };
+		AD8FF67B15CBF6DA00BFB572 /* DXSingletoneHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,14 +37,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		392ADA2DA9C84CB2B1F3F58D /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		AD80969415CC1299004BE9EC /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD80969615CC1299004BE9EC /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AD80969915CC1299004BE9EC /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AD80969D15CC1299004BE9EC /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		AD80969F15CC1299004BE9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD8096A115CC1299004BE9EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD8096A315CC1299004BE9EC /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		AD8096BA15CC137B004BE9EC /* DXSingletoneSpecSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DXSingletoneSpecSpec.mm; sourceTree = "<group>"; };
 		AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDXFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD8FF66115CBF53500BFB572 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD8FF66115CBF53500BFB572 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD8FF66515CBF53500BFB572 /* DXFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		AD8FF66615CBF53500BFB572 /* DXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXFoundation.h; sourceTree = "<group>"; };
 		AD8FF66815CBF53500BFB572 /* DXFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXFoundation.m; sourceTree = "<group>"; };
+		AD8FF67015CBF55E00BFB572 /* DXSingletone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletone.h; sourceTree = "<group>"; };
+		AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXSingletone.m"; sourceTree = "<group>"; };
+		AD8FF67915CBF6DA00BFB572 /* DXSingletoneHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletoneHolder.h; sourceTree = "<group>"; };
+		AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSingletoneHolder.m; sourceTree = "<group>"; };
+		DA019E918D2A46239684F64B /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AD80969115CC1299004BE9EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD80969715CC1299004BE9EC /* UIKit.framework in Frameworks */,
+				AD80969815CC1299004BE9EC /* Foundation.framework in Frameworks */,
+				AD80969A15CC1299004BE9EC /* CoreGraphics.framework in Frameworks */,
+				70A7348EE5EA4986B1A5FCC9 /* libPods-Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD8FF65B15CBF53500BFB572 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,12 +81,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD80969B15CC1299004BE9EC /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AD8096BC15CC13A8004BE9EC /* TestExamples */,
+				AD8096B915CC1368004BE9EC /* Specs */,
+				AD80969C15CC1299004BE9EC /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AD80969C15CC1299004BE9EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD80969D15CC1299004BE9EC /* Tests-Info.plist */,
+				AD80969E15CC1299004BE9EC /* InfoPlist.strings */,
+				AD8096A115CC1299004BE9EC /* main.m */,
+				AD8096A315CC1299004BE9EC /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AD8096B915CC1368004BE9EC /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				AD8096BA15CC137B004BE9EC /* DXSingletoneSpecSpec.mm */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		AD8096BC15CC13A8004BE9EC /* TestExamples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestExamples;
+			sourceTree = "<group>";
+		};
 		AD8FF65315CBF53500BFB572 = {
 			isa = PBXGroup;
 			children = (
 				AD8FF66315CBF53500BFB572 /* DXFoundation */,
+				AD80969B15CC1299004BE9EC /* Tests */,
 				AD8FF66015CBF53500BFB572 /* Frameworks */,
 				AD8FF65F15CBF53500BFB572 /* Products */,
+				392ADA2DA9C84CB2B1F3F58D /* Pods-Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */,
+				AD80969415CC1299004BE9EC /* Tests.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				AD8FF66115CBF53500BFB572 /* Foundation.framework */,
+				AD80969615CC1299004BE9EC /* UIKit.framework */,
+				AD80969915CC1299004BE9EC /* CoreGraphics.framework */,
+				DA019E918D2A46239684F64B /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -73,6 +151,7 @@
 		AD8FF66315CBF53500BFB572 /* DXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				AD8FF66F15CBF54700BFB572 /* DXSingletone */,
 				AD8FF66615CBF53500BFB572 /* DXFoundation.h */,
 				AD8FF66815CBF53500BFB572 /* DXFoundation.m */,
 				AD8FF66415CBF53500BFB572 /* Supporting Files */,
@@ -88,9 +167,38 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AD8FF66F15CBF54700BFB572 /* DXSingletone */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FF67015CBF55E00BFB572 /* DXSingletone.h */,
+				AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */,
+				AD8FF67915CBF6DA00BFB572 /* DXSingletoneHolder.h */,
+				AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */,
+			);
+			path = DXSingletone;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AD80969315CC1299004BE9EC /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD8096A915CC1299004BE9EC /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				AD80969015CC1299004BE9EC /* Sources */,
+				AD80969115CC1299004BE9EC /* Frameworks */,
+				AD80969215CC1299004BE9EC /* Resources */,
+				3627ECDEE2FF438E9FE2FD01 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = AD80969415CC1299004BE9EC /* Tests.app */;
+			productType = "com.apple.product-type.application";
+		};
 		AD8FF65D15CBF53500BFB572 /* DXFoundation */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AD8FF66C15CBF53500BFB572 /* Build configuration list for PBXNativeTarget "DXFoundation" */;
@@ -130,22 +238,102 @@
 			projectRoot = "";
 			targets = (
 				AD8FF65D15CBF53500BFB572 /* DXFoundation */,
+				AD80969315CC1299004BE9EC /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		AD80969215CC1299004BE9EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8096A015CC1299004BE9EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3627ECDEE2FF438E9FE2FD01 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		AD80969015CC1299004BE9EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8096A215CC1299004BE9EC /* main.m in Sources */,
+				AD8096B615CC1318004BE9EC /* DXSingletoneHolder.m in Sources */,
+				AD8096B815CC131B004BE9EC /* NSObject+DXSingletone.m in Sources */,
+				AD8096BB15CC137B004BE9EC /* DXSingletoneSpecSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AD8FF65A15CBF53500BFB572 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */,
+				AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingletone.m in Sources */,
+				AD8FF67B15CBF6DA00BFB572 /* DXSingletoneHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		AD80969E15CC1299004BE9EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD80969F15CC1299004BE9EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		AD8096A715CC1299004BE9EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 392ADA2DA9C84CB2B1F3F58D /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		AD8096A815CC1299004BE9EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 392ADA2DA9C84CB2B1F3F58D /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		AD8FF66A15CBF53500BFB572 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -219,6 +407,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AD8096A915CC1299004BE9EC /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8096A715CC1299004BE9EC /* Debug */,
+				AD8096A815CC1299004BE9EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AD8FF65815CBF53500BFB572 /* Build configuration list for PBXProject "DXFoundation" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -235,6 +432,7 @@
 				AD8FF66E15CBF53500BFB572 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
