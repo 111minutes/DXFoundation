@@ -1,0 +1,242 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD8FF66215CBF53500BFB572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
+		AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD8FF66615CBF53500BFB572 /* DXFoundation.h */; };
+		AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF66815CBF53500BFB572 /* DXFoundation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD8FF65C15CBF53500BFB572 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDXFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD8FF66115CBF53500BFB572 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AD8FF66515CBF53500BFB572 /* DXFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXFoundation-Prefix.pch"; sourceTree = "<group>"; };
+		AD8FF66615CBF53500BFB572 /* DXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXFoundation.h; sourceTree = "<group>"; };
+		AD8FF66815CBF53500BFB572 /* DXFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXFoundation.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AD8FF65B15CBF53500BFB572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8FF66215CBF53500BFB572 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AD8FF65315CBF53500BFB572 = {
+			isa = PBXGroup;
+			children = (
+				AD8FF66315CBF53500BFB572 /* DXFoundation */,
+				AD8FF66015CBF53500BFB572 /* Frameworks */,
+				AD8FF65F15CBF53500BFB572 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AD8FF65F15CBF53500BFB572 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD8FF66015CBF53500BFB572 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FF66115CBF53500BFB572 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD8FF66315CBF53500BFB572 /* DXFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FF66615CBF53500BFB572 /* DXFoundation.h */,
+				AD8FF66815CBF53500BFB572 /* DXFoundation.m */,
+				AD8FF66415CBF53500BFB572 /* Supporting Files */,
+			);
+			path = DXFoundation;
+			sourceTree = "<group>";
+		};
+		AD8FF66415CBF53500BFB572 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AD8FF66515CBF53500BFB572 /* DXFoundation-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AD8FF65D15CBF53500BFB572 /* DXFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD8FF66C15CBF53500BFB572 /* Build configuration list for PBXNativeTarget "DXFoundation" */;
+			buildPhases = (
+				AD8FF65A15CBF53500BFB572 /* Sources */,
+				AD8FF65B15CBF53500BFB572 /* Frameworks */,
+				AD8FF65C15CBF53500BFB572 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DXFoundation;
+			productName = DXFoundation;
+			productReference = AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AD8FF65515CBF53500BFB572 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = 111Minutes;
+			};
+			buildConfigurationList = AD8FF65815CBF53500BFB572 /* Build configuration list for PBXProject "DXFoundation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = AD8FF65315CBF53500BFB572;
+			productRefGroup = AD8FF65F15CBF53500BFB572 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AD8FF65D15CBF53500BFB572 /* DXFoundation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AD8FF65A15CBF53500BFB572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AD8FF66A15CBF53500BFB572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AD8FF66B15CBF53500BFB572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AD8FF66D15CBF53500BFB572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DXFoundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DXFoundation/DXFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		AD8FF66E15CBF53500BFB572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DXFoundation.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DXFoundation/DXFoundation-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AD8FF65815CBF53500BFB572 /* Build configuration list for PBXProject "DXFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8FF66A15CBF53500BFB572 /* Debug */,
+				AD8FF66B15CBF53500BFB572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD8FF66C15CBF53500BFB572 /* Build configuration list for PBXNativeTarget "DXFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD8FF66D15CBF53500BFB572 /* Debug */,
+				AD8FF66E15CBF53500BFB572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AD8FF65515CBF53500BFB572 /* Project object */;
+}
