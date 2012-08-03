@@ -28,6 +28,16 @@ describe(@"DXSingletone", ^{
         
         assertThat(instanceA, equalTo(instanceB));
     });
+    
+    it(@"Should create new shared instance after destroying old instance", ^{
+        SingletoneTestClass *instanceA = [SingletoneTestClass shared];
+        
+        [SingletoneTestClass destroySharedInstance];
+        
+        SingletoneTestClass *instanceB = [SingletoneTestClass shared];
+        
+        assertThat(instanceA, isNot(equalTo(instanceB)));
+    });
 });
 
 SPEC_END

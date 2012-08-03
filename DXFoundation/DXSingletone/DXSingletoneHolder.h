@@ -12,5 +12,6 @@
 @interface DXSingletoneHolder : NSObject <DXSingletone>
 
 - (id)getInstanceOfClass:(Class)requiredClass;
+- (void)destroyInstanceOfClass:(Class)requiredClass;
 
 @end

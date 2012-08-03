@@ -13,5 +13,6 @@
 @optional
 
 + (instancetype)shared;
++ (void)destroySharedInstance;
 
 @end

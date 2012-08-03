@@ -59,4 +59,11 @@
     return instance;
 }
 
+- (void)destroyInstanceOfClass:(Class)requiredClass
+{
+    dispatch_barrier_async(self.singltoneQueue, ^{
+        [self.singltonesClassPairs setValue:nil forKey:NSStringFromClass(requiredClass)];
+    });
+}
+
 @end

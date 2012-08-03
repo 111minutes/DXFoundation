@@ -24,4 +24,9 @@
     return [[DXSingletoneHolder shared] getInstanceOfClass:[self class]];
 }
 
++ (void)destroySharedInstance
+{
+    [[DXSingletoneHolder shared] destroyInstanceOfClass:[self class]];
+}
+
 @end
