@@ -13,5 +13,6 @@
 
 - (id)getInstanceOfClass:(Class)requiredClass;
 - (void)destroyInstanceOfClass:(Class)requiredClass;
+- (void)destroyAll;
 
 @end

@@ -66,4 +66,11 @@
     });
 }
 
+- (void)destroyAll
+{
+    dispatch_barrier_async(self.singltoneQueue, ^{
+        self.singltonesClassPairs = [NSMutableDictionary new];
+    });
+}
+
 @end
