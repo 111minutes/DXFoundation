@@ -1,27 +1,26 @@
 //
-//  DXSingletoneHolder.m
-//  DXFoundation
+//  DXSingletonHolder.m//  DXFoundation
 //
 //  Created by Sergey Zenchenko on 8/3/12.
 //  Copyright (c) 2012 111Minutes. All rights reserved.
 //
 
-#import "DXSingletoneHolder.h"
+#import "DXSingletonHolder.h"
 
-@interface DXSingletoneHolder ()
+@interface DXSingletonHolder ()
 
 @property (nonatomic, strong) NSDictionary *singltonesClassPairs;
 @property (nonatomic, assign) dispatch_queue_t singltoneQueue;
 @end
 
-@implementation DXSingletoneHolder
+@implementation DXSingletonHolder
 
 + (instancetype)shared
 {
-    static DXSingletoneHolder *sharedHolder = nil;
+    static DXSingletonHolder *sharedHolder = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedHolder = [DXSingletoneHolder new];
+        sharedHolder = [DXSingletonHolder new];
     });
     return sharedHolder;
 }
@@ -36,7 +35,7 @@
     self = [super init];
     if (self) {
         self.singltonesClassPairs = [NSMutableDictionary new];
-        self.singltoneQueue = dispatch_queue_create("com.111min.dxfoundation.singltone_queue", DISPATCH_QUEUE_CONCURRENT);
+        self.singltoneQueue = dispatch_queue_create("com.111min.foundation.singltone_queue", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }

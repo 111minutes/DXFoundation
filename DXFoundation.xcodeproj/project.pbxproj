@@ -8,19 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		70A7348EE5EA4986B1A5FCC9 /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA019E918D2A46239684F64B /* libPods-Tests.a */; };
+		AD744F3F15CD3D6F004B875B /* DXKVOHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD744F3E15CD3D6F004B875B /* DXKVOHandler.m */; };
+		AD744F4015CD3D6F004B875B /* DXKVOHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = AD744F3E15CD3D6F004B875B /* DXKVOHandler.m */; };
+		AD744F4315CD3D7B004B875B /* NSObject+DXKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = AD744F4215CD3D7B004B875B /* NSObject+DXKVO.m */; };
+		AD744F4415CD3D7B004B875B /* NSObject+DXKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = AD744F4215CD3D7B004B875B /* NSObject+DXKVO.m */; };
+		AD744F4615CD3E04004B875B /* DXVKOSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD744F4515CD3E04004B875B /* DXVKOSpec.mm */; };
 		AD80969715CC1299004BE9EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD80969615CC1299004BE9EC /* UIKit.framework */; };
 		AD80969815CC1299004BE9EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
 		AD80969A15CC1299004BE9EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD80969915CC1299004BE9EC /* CoreGraphics.framework */; };
 		AD8096A015CC1299004BE9EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AD80969E15CC1299004BE9EC /* InfoPlist.strings */; };
 		AD8096A215CC1299004BE9EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8096A115CC1299004BE9EC /* main.m */; };
-		AD8096B615CC1318004BE9EC /* DXSingletoneHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */; };
-		AD8096B815CC131B004BE9EC /* NSObject+DXSingletone.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */; };
-		AD8096BB15CC137B004BE9EC /* DXSingletoneSpecSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8096BA15CC137B004BE9EC /* DXSingletoneSpecSpec.mm */; };
+		AD8096B615CC1318004BE9EC /* DXSingletonHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */; };
+		AD8096B815CC131B004BE9EC /* NSObject+DXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */; };
+		AD8096BB15CC137B004BE9EC /* DXSingletoneSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8096BA15CC137B004BE9EC /* DXSingletoneSpec.mm */; };
 		AD8FF66215CBF53500BFB572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
 		AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD8FF66615CBF53500BFB572 /* DXFoundation.h */; };
 		AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF66815CBF53500BFB572 /* DXFoundation.m */; };
-		AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingletone.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */; };
-		AD8FF67B15CBF6DA00BFB572 /* DXSingletoneHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */; };
+		AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */; };
+		AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +43,11 @@
 
 /* Begin PBXFileReference section */
 		392ADA2DA9C84CB2B1F3F58D /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		AD744F3D15CD3D6F004B875B /* DXKVOHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXKVOHandler.h; sourceTree = "<group>"; };
+		AD744F3E15CD3D6F004B875B /* DXKVOHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXKVOHandler.m; sourceTree = "<group>"; };
+		AD744F4115CD3D7B004B875B /* NSObject+DXKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DXKVO.h"; sourceTree = "<group>"; };
+		AD744F4215CD3D7B004B875B /* NSObject+DXKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXKVO.m"; sourceTree = "<group>"; };
+		AD744F4515CD3E04004B875B /* DXVKOSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DXVKOSpec.mm; sourceTree = "<group>"; };
 		AD80969415CC1299004BE9EC /* Tests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD80969615CC1299004BE9EC /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AD80969915CC1299004BE9EC /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,16 +55,16 @@
 		AD80969F15CC1299004BE9EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AD8096A115CC1299004BE9EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD8096A315CC1299004BE9EC /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		AD8096BA15CC137B004BE9EC /* DXSingletoneSpecSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DXSingletoneSpecSpec.mm; sourceTree = "<group>"; };
+		AD8096BA15CC137B004BE9EC /* DXSingletoneSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DXSingletoneSpec.mm; sourceTree = "<group>"; };
 		AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDXFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8FF66115CBF53500BFB572 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD8FF66515CBF53500BFB572 /* DXFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		AD8FF66615CBF53500BFB572 /* DXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXFoundation.h; sourceTree = "<group>"; };
 		AD8FF66815CBF53500BFB572 /* DXFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXFoundation.m; sourceTree = "<group>"; };
-		AD8FF67015CBF55E00BFB572 /* DXSingletone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletone.h; sourceTree = "<group>"; };
-		AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXSingletone.m"; sourceTree = "<group>"; };
-		AD8FF67915CBF6DA00BFB572 /* DXSingletoneHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletoneHolder.h; sourceTree = "<group>"; };
-		AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSingletoneHolder.m; sourceTree = "<group>"; };
+		AD8FF67015CBF55E00BFB572 /* DXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingleton.h; sourceTree = "<group>"; };
+		AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXSingleton.m"; sourceTree = "<group>"; };
+		AD8FF67915CBF6DA00BFB572 /* DXSingletonHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletonHolder.h; sourceTree = "<group>"; };
+		AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSingletonHolder.m; sourceTree = "<group>"; };
 		DA019E918D2A46239684F64B /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -81,6 +91,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD744F3B15CD3D38004B875B /* DXKVO */ = {
+			isa = PBXGroup;
+			children = (
+				AD744F3D15CD3D6F004B875B /* DXKVOHandler.h */,
+				AD744F3E15CD3D6F004B875B /* DXKVOHandler.m */,
+				AD744F4115CD3D7B004B875B /* NSObject+DXKVO.h */,
+				AD744F4215CD3D7B004B875B /* NSObject+DXKVO.m */,
+			);
+			path = DXKVO;
+			sourceTree = "<group>";
+		};
 		AD80969B15CC1299004BE9EC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,7 +126,8 @@
 		AD8096B915CC1368004BE9EC /* Specs */ = {
 			isa = PBXGroup;
 			children = (
-				AD8096BA15CC137B004BE9EC /* DXSingletoneSpecSpec.mm */,
+				AD8096BA15CC137B004BE9EC /* DXSingletoneSpec.mm */,
+				AD744F4515CD3E04004B875B /* DXVKOSpec.mm */,
 			);
 			path = Specs;
 			sourceTree = "<group>";
@@ -151,7 +173,8 @@
 		AD8FF66315CBF53500BFB572 /* DXFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				AD8FF66F15CBF54700BFB572 /* DXSingletone */,
+				AD744F3B15CD3D38004B875B /* DXKVO */,
+				AD8FF66F15CBF54700BFB572 /* DXSingleton */,
 				AD8FF66615CBF53500BFB572 /* DXFoundation.h */,
 				AD8FF66815CBF53500BFB572 /* DXFoundation.m */,
 				AD8FF66415CBF53500BFB572 /* Supporting Files */,
@@ -167,15 +190,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		AD8FF66F15CBF54700BFB572 /* DXSingletone */ = {
+		AD8FF66F15CBF54700BFB572 /* DXSingleton */ = {
 			isa = PBXGroup;
 			children = (
-				AD8FF67015CBF55E00BFB572 /* DXSingletone.h */,
-				AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingletone.m */,
-				AD8FF67915CBF6DA00BFB572 /* DXSingletoneHolder.h */,
-				AD8FF67A15CBF6DA00BFB572 /* DXSingletoneHolder.m */,
+				AD8FF67015CBF55E00BFB572 /* DXSingleton.h */,
+				AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */,
+				AD8FF67915CBF6DA00BFB572 /* DXSingletonHolder.h */,
+				AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */,
 			);
-			path = DXSingletone;
+			lastKnownFileType = text;
+			path = DXSingleton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,9 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD8096A215CC1299004BE9EC /* main.m in Sources */,
-				AD8096B615CC1318004BE9EC /* DXSingletoneHolder.m in Sources */,
-				AD8096B815CC131B004BE9EC /* NSObject+DXSingletone.m in Sources */,
-				AD8096BB15CC137B004BE9EC /* DXSingletoneSpecSpec.mm in Sources */,
+				AD8096B615CC1318004BE9EC /* DXSingletonHolder.m in Sources */,
+				AD8096B815CC131B004BE9EC /* NSObject+DXSingleton.m in Sources */,
+				AD8096BB15CC137B004BE9EC /* DXSingletoneSpec.mm in Sources */,
+				AD744F4015CD3D6F004B875B /* DXKVOHandler.m in Sources */,
+				AD744F4415CD3D7B004B875B /* NSObject+DXKVO.m in Sources */,
+				AD744F4615CD3E04004B875B /* DXVKOSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,8 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */,
-				AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingletone.m in Sources */,
-				AD8FF67B15CBF6DA00BFB572 /* DXSingletoneHolder.m in Sources */,
+				AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingleton.m in Sources */,
+				AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */,
+				AD744F3F15CD3D6F004B875B /* DXKVOHandler.m in Sources */,
+				AD744F4315CD3D7B004B875B /* NSObject+DXKVO.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

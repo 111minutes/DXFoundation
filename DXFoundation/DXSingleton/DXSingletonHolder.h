@@ -1,15 +1,14 @@
 //
-//  DXSingletoneHolder.h
-//  DXFoundation
+//  DXSingletonHolder.h//  DXFoundation
 //
 //  Created by Sergey Zenchenko on 8/3/12.
 //  Copyright (c) 2012 111Minutes. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "DXSingletone.h"
+#import "DXSingleton.h"
 
-@interface DXSingletoneHolder : NSObject <DXSingletone>
+@interface DXSingletonHolder : NSObject <DXSingleton>
 
 - (id)getInstanceOfClass:(Class)requiredClass;
 - (void)destroyInstanceOfClass:(Class)requiredClass;

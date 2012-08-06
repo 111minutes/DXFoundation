@@ -1,14 +1,9 @@
-#import <Cedar-iOS/SpecHelper.h>
-#define HC_SHORTHAND
-#import <OCHamcrest/OCHamcrest.h>
-
 using namespace Cedar::Matchers;
 
-#import "DXSingletone.h"
-#import "DXSingletoneHolder.h"
+#import "DXSingleton.h"
+#import "DXSingletonHolder.h"
 
-
-@interface SingletoneTestClass : NSObject <DXSingletone>
+@interface SingletoneTestClass : NSObject <DXSingleton>
 
 @end
 
@@ -18,7 +13,7 @@ using namespace Cedar::Matchers;
 
 SPEC_BEGIN(DXSingletoneSpec)
 
-describe(@"DXSingletone", ^{
+describe(@"DXSingleton", ^{
     it(@"Should return instance of class", ^{
         assertThat([SingletoneTestClass shared], notNilValue());
         assertThatBool([[SingletoneTestClass shared] isKindOfClass:[SingletoneTestClass class]], equalToBool(YES));
@@ -44,7 +39,7 @@ describe(@"DXSingletone", ^{
     it(@"Should create new shared instance after destroying all old instances", ^{
         SingletoneTestClass *instanceA = [SingletoneTestClass shared];
         
-        [[DXSingletoneHolder shared] destroyAll];
+        [[DXSingletonHolder shared] destroyAll];
         
         SingletoneTestClass *instanceB = [SingletoneTestClass shared];
         
