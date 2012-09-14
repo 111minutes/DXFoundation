@@ -26,6 +26,9 @@
 		AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF66815CBF53500BFB572 /* DXFoundation.m */; };
 		AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */; };
 		AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */; };
+		BC54312016022A0900636164 /* DXDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54311F16022A0900636164 /* DXDateFormatter.m */; };
+		BC54312416022E6600636164 /* DXNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54312316022E6600636164 /* DXNumberFormatter.m */; };
+		BCCE19C516031941003D3D7D /* DXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE19C416031941003D3D7D /* DXCalendar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +68,12 @@
 		AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXSingleton.m"; sourceTree = "<group>"; };
 		AD8FF67915CBF6DA00BFB572 /* DXSingletonHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletonHolder.h; sourceTree = "<group>"; };
 		AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSingletonHolder.m; sourceTree = "<group>"; };
+		BC54311E16022A0900636164 /* DXDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXDateFormatter.h; sourceTree = "<group>"; };
+		BC54311F16022A0900636164 /* DXDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXDateFormatter.m; sourceTree = "<group>"; };
+		BC54312216022E6600636164 /* DXNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXNumberFormatter.h; sourceTree = "<group>"; };
+		BC54312316022E6600636164 /* DXNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXNumberFormatter.m; sourceTree = "<group>"; };
+		BCCE19C416031941003D3D7D /* DXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXCalendar.m; sourceTree = "<group>"; };
+		BCCE19C616031949003D3D7D /* DXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXCalendar.h; sourceTree = "<group>"; };
 		DA019E918D2A46239684F64B /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +182,9 @@
 		AD8FF66315CBF53500BFB572 /* DXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				BCCE19C21603192B003D3D7D /* DXCalendar */,
+				BC54312116022E4700636164 /* DXNumberFormatter */,
+				BC54311C160229EE00636164 /* DXDateFormatter */,
 				AD744F3B15CD3D38004B875B /* DXKVO */,
 				AD8FF66F15CBF54700BFB572 /* DXSingleton */,
 				AD8FF66615CBF53500BFB572 /* DXFoundation.h */,
@@ -198,8 +210,34 @@
 				AD8FF67915CBF6DA00BFB572 /* DXSingletonHolder.h */,
 				AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */,
 			);
-			lastKnownFileType = text;
 			path = DXSingleton;
+			sourceTree = "<group>";
+		};
+		BC54311C160229EE00636164 /* DXDateFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				BC54311E16022A0900636164 /* DXDateFormatter.h */,
+				BC54311F16022A0900636164 /* DXDateFormatter.m */,
+			);
+			path = DXDateFormatter;
+			sourceTree = "<group>";
+		};
+		BC54312116022E4700636164 /* DXNumberFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				BC54312216022E6600636164 /* DXNumberFormatter.h */,
+				BC54312316022E6600636164 /* DXNumberFormatter.m */,
+			);
+			path = DXNumberFormatter;
+			sourceTree = "<group>";
+		};
+		BCCE19C21603192B003D3D7D /* DXCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				BCCE19C616031949003D3D7D /* DXCalendar.h */,
+				BCCE19C416031941003D3D7D /* DXCalendar.m */,
+			);
+			path = DXCalendar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +357,9 @@
 				AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */,
 				AD744F3F15CD3D6F004B875B /* DXKVOHandler.m in Sources */,
 				AD744F4315CD3D7B004B875B /* NSObject+DXKVO.m in Sources */,
+				BC54312016022A0900636164 /* DXDateFormatter.m in Sources */,
+				BC54312416022E6600636164 /* DXNumberFormatter.m in Sources */,
+				BCCE19C516031941003D3D7D /* DXCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
