@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DXSingleton.h"
+#import "DXCalendar.h"
+#import "DXNumberFormatter.h"
+#import "DXDateFormatter.h"
 
 @interface DXFoundation : NSObject
 
