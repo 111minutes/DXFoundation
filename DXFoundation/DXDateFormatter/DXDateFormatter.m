@@ -8,9 +8,14 @@
 
 #import "DXDateFormatter.h"
 
+
 @interface DXDateFormatter ()
 
+@property(nonatomic, strong) NSMutableDictionary* formatters;
+
 - (void)changeSystemTimeZone;
+
+- (NSDateFormatter*)formatterForDateFormat:(NSString*)dateFormat;
 
 @end
 
@@ -35,16 +40,32 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
+- (NSDateFormatter*)formatterForDateFormat:(NSString *)dateFormat
+{
+    if (!_formatters) {
+        self.formatters = [NSMutableDictionary new];
+    }
+    
+    NSDateFormatter* formatter = [self.formatters objectForKey:dateFormat];
+    
+    if (!formatter) {
+        formatter = [NSDateFormatter new];
+        formatter.dateFormat = dateFormat;
+        
+        [self.formatters setObject:formatter forKey:dateFormat];
+    }
+    
+    return formatter;
+}
+
 - (NSString *)stringFromDate:(NSDate *)date dateFormat:(NSString *)dateFormat
 {
-    self.dateFormat = dateFormat;
-    return [self stringFromDate:date];
+    return [[self formatterForDateFormat:dateFormat] stringFromDate:date];
 }
 
 - (NSDate *)dateFromString:(NSString *)string dateFormat:(NSString *)dateFormat
 {
-    self.dateFormat = dateFormat;
-    return [self dateFromString:string];
+    return [[self formatterForDateFormat:dateFormat] dateFromString:string];
 }
 
 + (NSString *)stringFromDate:(NSDate *)date dateFormat:(NSString *)dateFormat
@@ -58,7 +79,6 @@
     return [[DXDateFormatter shared] dateFromString:string
                                          dateFormat:dateFormat];
 }
-
 
 - (void)changeSystemTimeZone
 {
