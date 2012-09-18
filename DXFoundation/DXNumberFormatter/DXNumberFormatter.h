@@ -10,10 +10,10 @@
 
 @interface DXNumberFormatter : NSNumberFormatter <DXSingleton>
 
-- (NSNumber*)decimalNumberFromString:(NSString*)string;
-- (NSString*)stringFromDecimalNumber:(NSNumber*)number;
++ (NSNumber*)numberFromString:(NSString *)string style:(NSNumberFormatterStyle)style;
++ (NSString*)stringFromNumber:(NSNumber *)number style:(NSNumberFormatterStyle)style;
 
-+ (NSNumber*)decimalNumberFromString:(NSString*)string;
-+ (NSString*)stringFromDecimalNumber:(NSNumber*)number;
+- (NSNumber*)numberFromString:(NSString *)string style:(NSNumberFormatterStyle)style;
+- (NSString*)stringFromNumber:(NSNumber *)number style:(NSNumberFormatterStyle)style;
 
 @end

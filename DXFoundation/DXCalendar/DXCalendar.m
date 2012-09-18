@@ -1,9 +1,9 @@
 //
-//  CSCalendar.m
-//  CrowdSync
+//  DXCalendar.m
+//  DXFoundation
 //
 //  Created by Max Mashkov on 9/12/12.
-//  Copyright (c) 2012 DIMALEX. All rights reserved.
+//  Copyright (c) 2012 111Minutes. All rights reserved.
 //
 
 #import "DXCalendar.h"
