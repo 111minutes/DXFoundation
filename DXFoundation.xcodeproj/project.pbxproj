@@ -21,13 +21,13 @@
 		AD8096BB15CC137B004BE9EC /* DXSingletoneSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AD8096BA15CC137B004BE9EC /* DXSingletoneSpec.mm */; };
 		AD8FF66215CBF53500BFB572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
 		AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD8FF66615CBF53500BFB572 /* DXFoundation.h */; };
-		AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF66815CBF53500BFB572 /* DXFoundation.m */; };
 		AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */; };
 		AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */; };
 		BC14DE4E1619AE1C00E30E02 /* NSString+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = BC14DE4D1619AE1C00E30E02 /* NSString+UUID.m */; };
 		BC14DE511619B04500E30E02 /* NSObject+UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = BC14DE501619B04500E30E02 /* NSObject+UUID.m */; };
 		BC54312016022A0900636164 /* DXDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54311F16022A0900636164 /* DXDateFormatter.m */; };
 		BC54312416022E6600636164 /* DXNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54312316022E6600636164 /* DXNumberFormatter.m */; };
+		BC58A96C162DB9EF0049DF7E /* DXFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC58A96B162DB9EF0049DF7E /* DXFileManager.m */; };
 		BCCE19C516031941003D3D7D /* DXCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = BCCE19C416031941003D3D7D /* DXCalendar.m */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +61,6 @@
 		AD8FF66115CBF53500BFB572 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD8FF66515CBF53500BFB572 /* DXFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXFoundation-Prefix.pch"; sourceTree = "<group>"; };
 		AD8FF66615CBF53500BFB572 /* DXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXFoundation.h; sourceTree = "<group>"; };
-		AD8FF66815CBF53500BFB572 /* DXFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DXFoundation.m; sourceTree = "<group>"; };
 		AD8FF67015CBF55E00BFB572 /* DXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingleton.h; sourceTree = "<group>"; };
 		AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXSingleton.m"; sourceTree = "<group>"; };
 		AD8FF67915CBF6DA00BFB572 /* DXSingletonHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletonHolder.h; sourceTree = "<group>"; };
@@ -74,6 +73,8 @@
 		BC54311F16022A0900636164 /* DXDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXDateFormatter.m; sourceTree = "<group>"; };
 		BC54312216022E6600636164 /* DXNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXNumberFormatter.h; sourceTree = "<group>"; };
 		BC54312316022E6600636164 /* DXNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXNumberFormatter.m; sourceTree = "<group>"; };
+		BC58A96A162DB9EF0049DF7E /* DXFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXFileManager.h; sourceTree = "<group>"; };
+		BC58A96B162DB9EF0049DF7E /* DXFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXFileManager.m; sourceTree = "<group>"; };
 		BCCE19C416031941003D3D7D /* DXCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXCalendar.m; sourceTree = "<group>"; };
 		BCCE19C616031949003D3D7D /* DXCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXCalendar.h; sourceTree = "<group>"; };
 		DA019E918D2A46239684F64B /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +181,7 @@
 		AD8FF66315CBF53500BFB572 /* DXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				BC58A968162DB9DD0049DF7E /* DXFileManager */,
 				BC14DE4A1619AD8F00E30E02 /* Categories */,
 				BCCE19C21603192B003D3D7D /* DXCalendar */,
 				BC54312116022E4700636164 /* DXNumberFormatter */,
@@ -187,7 +189,6 @@
 				AD744F3B15CD3D38004B875B /* DXKVO */,
 				AD8FF66F15CBF54700BFB572 /* DXSingleton */,
 				AD8FF66615CBF53500BFB572 /* DXFoundation.h */,
-				AD8FF66815CBF53500BFB572 /* DXFoundation.m */,
 				AD8FF66415CBF53500BFB572 /* Supporting Files */,
 			);
 			path = DXFoundation;
@@ -239,6 +240,15 @@
 				BC54312316022E6600636164 /* DXNumberFormatter.m */,
 			);
 			path = DXNumberFormatter;
+			sourceTree = "<group>";
+		};
+		BC58A968162DB9DD0049DF7E /* DXFileManager */ = {
+			isa = PBXGroup;
+			children = (
+				BC58A96A162DB9EF0049DF7E /* DXFileManager.h */,
+				BC58A96B162DB9EF0049DF7E /* DXFileManager.m */,
+			);
+			path = DXFileManager;
 			sourceTree = "<group>";
 		};
 		BCCE19C21603192B003D3D7D /* DXCalendar */ = {
@@ -362,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD8FF66915CBF53500BFB572 /* DXFoundation.m in Sources */,
 				AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingleton.m in Sources */,
 				AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */,
 				AD744F3F15CD3D6F004B875B /* DXKVOHandler.m in Sources */,
@@ -372,6 +381,7 @@
 				BCCE19C516031941003D3D7D /* DXCalendar.m in Sources */,
 				BC14DE4E1619AE1C00E30E02 /* NSString+UUID.m in Sources */,
 				BC14DE511619B04500E30E02 /* NSObject+UUID.m in Sources */,
+				BC58A96C162DB9EF0049DF7E /* DXFileManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,4 @@
 #import "DXNumberFormatter.h"
 #import "DXDateFormatter.h"
 #import "NSObject+UUID.h"
-
-@interface DXFoundation : NSObject
-
-@end
+#import "DXFileManager.h"
