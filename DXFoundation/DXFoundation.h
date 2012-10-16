@@ -11,7 +11,4 @@
 #import "DXCalendar.h"
 #import "DXNumberFormatter.h"
 #import "DXDateFormatter.h"
-
-@interface DXFoundation : NSObject
-
-@end
+#import "DXFileManager.h"
