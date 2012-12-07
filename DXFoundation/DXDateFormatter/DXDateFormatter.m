@@ -80,9 +80,14 @@
                                          dateFormat:dateFormat];
 }
 
+- (NSTimeZone*)requiredTimeZone
+{
+    return [NSTimeZone systemTimeZone];
+}
+
 - (void)changeSystemTimeZone
 {
-    self.timeZone = [NSTimeZone systemTimeZone];
+    self.timeZone = [self requiredTimeZone];
 }
 
 
