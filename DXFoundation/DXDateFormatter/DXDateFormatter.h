@@ -16,4 +16,6 @@
 - (NSString *)stringFromDate:(NSDate *)date dateFormat:(NSString *)dateFormat;
 - (NSDate *)dateFromString:(NSString *)string dateFormat:(NSString *)dateFormat;
 
+- (NSTimeZone*)requiredTimeZone;
+
 @end
