@@ -1,5 +1,3 @@
-using namespace Cedar::Matchers;
-
 #import "DXSingleton.h"
 #import "DXSingletonHolder.h"
 

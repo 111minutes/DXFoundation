@@ -49,7 +49,10 @@
     NSDateFormatter* formatter = [self.formatters objectForKey:dateFormat];
     
     if (!formatter) {
-        formatter = [NSDateFormatter new];
+        DXDateFormatter *selfCopy = [self copy];
+        selfCopy.formatters = nil;
+        
+        formatter = (NSDateFormatter *)selfCopy;
         formatter.dateFormat = dateFormat;
         
         [self.formatters setObject:formatter forKey:dateFormat];
