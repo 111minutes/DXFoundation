@@ -1,5 +1,3 @@
-using namespace Cedar::Matchers;
-
 #import "NSObject+DXKVO.h"
 
 @interface DXKVOTestClass : NSObject
