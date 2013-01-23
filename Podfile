@@ -1,6 +1,5 @@
 platform :ios
 
-target :Tests do
-    pod 'Cedar'
-    pod "OCHamcrest"
+target :KiwiUnitTest, :exclusive => true do
+   pod 'Kiwi'
 end

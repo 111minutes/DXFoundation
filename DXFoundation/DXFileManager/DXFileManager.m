@@ -9,6 +9,7 @@
 #import "DXFileManager.h"
 #import <sys/xattr.h>
 #import <CommonCrypto/CommonDigest.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation DXFileManager
 
@@ -114,6 +115,92 @@
 - (NSString *)MD5ForFileAtURL:(NSURL *)URL
 {
     return [self MD5ForFileAtPath:[URL path]];
+}
+
++ (void)copyALAsset:(ALAsset *)asset
+      toFileWithURL:(NSURL *)fileURL
+      progressBlock:(void (^)(float progress))progressBlock
+       successBlock:(void (^)(NSURL *fileURL, NSString *md5))successBlock
+
+{
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[fileURL path]]) {
+        [[NSFileManager defaultManager] createFileAtPath:[fileURL path]
+                                                contents:nil
+                                              attributes:nil];
+    }
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:[fileURL path]];
+    
+    ALAssetRepresentation *defaultRepresentation = [asset defaultRepresentation];
+    
+    NSInteger iteration = 0;
+    
+    size_t BufferSize = 2 * 1024 * 1024 * sizeof(uint8_t);
+    
+    NSUInteger offset = 0, bytesRead = 0;
+    
+    CC_MD5_CTX md5;
+    CC_MD5_Init(&md5);
+    
+    do {
+        @autoreleasepool {
+            @try {
+                
+                uint8_t *buffer = calloc(BufferSize, sizeof(*buffer));
+                
+                NSError *error = nil;
+                
+                bytesRead = [defaultRepresentation getBytes:buffer
+                                                 fromOffset:offset
+                                                     length:BufferSize
+                                                      error:&error];
+                
+                NSData *data = [NSData dataWithBytesNoCopy:buffer
+                                                    length:bytesRead
+                                              freeWhenDone:YES];
+                
+                CC_MD5_Update(&md5, [data bytes], [data length]);
+                
+                [fileHandle writeData:data];
+                
+                offset += bytesRead;
+                
+            } @catch (NSException *exception) {
+                
+                return;
+            }
+        }
+        
+        float progress = (float)((float)(iteration * BufferSize) /
+                                 (float)(defaultRepresentation.size));
+        
+        if (progress >= 1.f) {
+            progress = 1.f;
+        }
+        
+        if (progressBlock) {
+            progressBlock(progress);
+        }
+        
+        iteration++;
+        
+    } while (bytesRead > 0);
+    
+    unsigned char digest[CC_MD5_DIGEST_LENGTH];
+    CC_MD5_Final(digest, &md5);
+    NSString *md5String = [NSString stringWithFormat:@"%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x%02x",
+                           digest[0], digest[1],
+                           digest[2], digest[3],
+                           digest[4], digest[5],
+                           digest[6], digest[7],
+                           digest[8], digest[9],
+                           digest[10], digest[11],
+                           digest[12], digest[13],
+                           digest[14], digest[15]];
+    
+    if (successBlock) {
+        successBlock(fileURL, md5String);
+    }
 }
 
 @end
