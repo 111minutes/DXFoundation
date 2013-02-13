@@ -11,6 +11,12 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+@interface DXFileManager ()
+
+@property (nonatomic, strong) NSMutableDictionary *direcotryPaths;
+
+@end
+
 @implementation DXFileManager
 
 + (DXFileManager*)defaultManager
@@ -42,9 +48,19 @@
 
 - (NSString *)pathToDir:(NSSearchPathDirectory)aPathDirectory
 {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
-    NSString *pathToDir = documentsDirectory = [paths objectAtIndex:0];
+    if (!self.direcotryPaths) {
+        self.direcotryPaths = [NSMutableDictionary new];
+    }
     
+    NSString *pathToDir = [self.direcotryPaths valueForKey:@(aPathDirectory)];
+    
+    if (!pathToDir) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
+        pathToDir = documentsDirectory = [paths objectAtIndex:0];
+        
+        [self.direcotryPaths setObject:pathToDir forKey:@(aPathDirectory)];
+    }
+
     return pathToDir;
 }
 
