@@ -12,4 +12,6 @@
 
 - (void)addObserverForKeyPath:(NSString *)keyPath expectedValue:(id)value callback:(void(^)())callback;
 
+- (void)removeObserverForKeyPath:(NSString *)aKeyPath;
+
 @end

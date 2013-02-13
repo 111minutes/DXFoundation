@@ -16,4 +16,6 @@
 @property(nonatomic, copy) NSString *keyPath;
 
 @property(nonatomic, weak) NSObject *target;
+
+- (void)removeObserver;
 @end

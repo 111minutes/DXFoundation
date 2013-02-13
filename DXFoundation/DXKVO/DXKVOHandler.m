@@ -12,7 +12,9 @@
 
 - (void)dealloc
 {
-    [self.target removeObserver:self forKeyPath:self.keyPath];
+    if (self.target) {
+        [self removeObserver];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -22,6 +24,16 @@
             self.callback();
         }
     }
+}
+
+- (void)removeObserver
+{
+    [self.target removeObserver:self forKeyPath:self.keyPath];
+    
+    self.target = nil;
+    self.keyPath = nil;
+    self.callback = nil;
+    self.expectedValue = nil;
 }
 
 @end
