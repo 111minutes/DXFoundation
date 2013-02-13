@@ -32,15 +32,24 @@
 
 - (NSString *)pathToDocumentsDirectory
 {
-    static NSString *documentsDirectory = nil;
-    static dispatch_once_t dispatch_token;
-    dispatch_once(&dispatch_token, ^{
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsDirectory = [paths objectAtIndex:0];
-    });
-    return documentsDirectory;
+    return [self pathToDir:NSDocumentDirectory];
 }
 
+- (NSString *)pathToCacheDirectory
+{
+    return [self pathToDir:NSCachesDirectory];
+}
+
+- (NSString *)pathToDir:(NSSearchPathDirectory)aPathDirectory
+{
+    static NSString *pathToDir = nil;
+    static dispatch_once_t dispatch_token;
+    dispatch_once(&dispatch_token, ^{
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
+        documentsDirectory = [paths objectAtIndex:0];
+    });
+    return pathToDir;
+}
 
 #pragma mark - iCloud sync
 
