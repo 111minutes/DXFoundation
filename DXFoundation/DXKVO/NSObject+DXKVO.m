@@ -16,11 +16,14 @@ static char *assocKey = "DXKVOStorage";
 
 - (NSMutableArray *)kvoHandlers
 {
-    if (!self.kvoHandlers) {
-        objc_setAssociatedObject(self, &assocKey, [NSMutableArray new], OBJC_ASSOCIATION_RETAIN);
+    NSMutableArray *associatedArray = objc_getAssociatedObject(self, &assocKey);
+    
+    if (!associatedArray) {
+        associatedArray = [NSMutableArray new];
+        objc_setAssociatedObject(self, &assocKey, associatedArray, OBJC_ASSOCIATION_RETAIN);
     }
     
-    return objc_getAssociatedObject(self, &assocKey);
+    return associatedArray;
 }
 
 - (void)addObserverForKeyPath:(NSString *)keyPath expectedValue:(id)value callback:(void(^)())callback
