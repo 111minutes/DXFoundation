@@ -42,12 +42,9 @@
 
 - (NSString *)pathToDir:(NSSearchPathDirectory)aPathDirectory
 {
-    static NSString *pathToDir = nil;
-    static dispatch_once_t dispatch_token;
-    dispatch_once(&dispatch_token, ^{
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
-        documentsDirectory = [paths objectAtIndex:0];
-    });
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
+    NSString *pathToDir = documentsDirectory = [paths objectAtIndex:0];
+    
     return pathToDir;
 }
 
