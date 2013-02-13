@@ -52,13 +52,15 @@
         self.direcotryPaths = [NSMutableDictionary new];
     }
     
-    NSString *pathToDir = [self.direcotryPaths valueForKey:@(aPathDirectory)];
+    NSString *pathKey = @(aPathDirectory).stringValue;
+    
+    NSString *pathToDir = [self.direcotryPaths valueForKey:pathKey];
     
     if (!pathToDir) {
         NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
-        pathToDir = documentsDirectory = [paths objectAtIndex:0];
+        pathToDir = [paths objectAtIndex:0];
         
-        [self.direcotryPaths setObject:pathToDir forKey:@(aPathDirectory)];
+        [self.direcotryPaths setObject:pathToDir forKey:pathKey];
     }
 
     return pathToDir;

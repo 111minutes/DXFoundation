@@ -12,13 +12,16 @@
 
 static char *assocKey = "DXKVOStorage";
 
-@interface NSObject (DXKVO)
-
-@property (nonatomic, strong) NSMutableArray *kvoHandlers;
-
-@end
-
 @implementation NSObject (DXKVO)
+
+- (NSMutableArray *)kvoHandlers
+{
+    if (!self.kvoHandlers) {
+        objc_setAssociatedObject(self, &assocKey, [NSMutableArray new], OBJC_ASSOCIATION_RETAIN);
+    }
+    
+    return objc_getAssociatedObject(self, &assocKey);
+}
 
 - (void)addObserverForKeyPath:(NSString *)keyPath expectedValue:(id)value callback:(void(^)())callback
 {
@@ -28,13 +31,6 @@ static char *assocKey = "DXKVOStorage";
     handler.callback = callback;
     handler.keyPath = keyPath;
     handler.target = self;
-
-     self.kvoHandlers = objc_getAssociatedObject(self, assocKey);
-    
-    if (!self.kvoHandlers) {
-        self.kvoHandlers = [NSMutableArray new];
-        objc_setAssociatedObject(self, &assocKey, self.kvoHandlers, OBJC_ASSOCIATION_RETAIN);
-    }
 
     [self.kvoHandlers addObject:handler];
 
