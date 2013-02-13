@@ -15,6 +15,7 @@
 #pragma mark - Helpers
 
 - (NSString *)pathToDocumentsDirectory;
+- (NSString *)pathToCacheDirectory;
 - (long long)freeMemorySpace;
 
 

@@ -11,6 +11,12 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+@interface DXFileManager ()
+
+@property (nonatomic, strong) NSMutableDictionary *direcotryPaths;
+
+@end
+
 @implementation DXFileManager
 
 + (DXFileManager*)defaultManager
@@ -32,15 +38,31 @@
 
 - (NSString *)pathToDocumentsDirectory
 {
-    static NSString *documentsDirectory = nil;
-    static dispatch_once_t dispatch_token;
-    dispatch_once(&dispatch_token, ^{
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        documentsDirectory = [paths objectAtIndex:0];
-    });
-    return documentsDirectory;
+    return [self pathToDir:NSDocumentDirectory];
 }
 
+- (NSString *)pathToCacheDirectory
+{
+    return [self pathToDir:NSCachesDirectory];
+}
+
+- (NSString *)pathToDir:(NSSearchPathDirectory)aPathDirectory
+{
+    if (!self.direcotryPaths) {
+        self.direcotryPaths = [NSMutableDictionary new];
+    }
+    
+    NSString *pathToDir = [self.direcotryPaths valueForKey:@(aPathDirectory)];
+    
+    if (!pathToDir) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(aPathDirectory, NSUserDomainMask, YES);
+        pathToDir = documentsDirectory = [paths objectAtIndex:0];
+        
+        [self.direcotryPaths setObject:pathToDir forKey:@(aPathDirectory)];
+    }
+
+    return pathToDir;
+}
 
 #pragma mark - iCloud sync
 
