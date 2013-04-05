@@ -6,5 +6,5 @@
 //  Copyright (c) 2013 111Minutes. All rights reserved.
 //
 
-#define CSWeakSelf __weak typeof(self)
-#define CSWeakRef(object) __weak typeof(object)
+#define DXWeakSelf __weak typeof(self)
+#define DXWeakRef(object) __weak typeof(object)

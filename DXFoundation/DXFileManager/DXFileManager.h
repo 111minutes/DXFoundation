@@ -16,6 +16,11 @@
 
 - (NSString *)pathToDocumentsDirectory;
 - (NSString *)pathToCacheDirectory;
+- (NSString *)documentsDirectoryPathWithPathComponent:(NSString *)path;
+- (NSString *)cachesDirectoryPathWithPathComponent:(NSString *)path;
+- (NSString *)tempDirectoryPathWithPathComponent:(NSString *)path;
+- (BOOL)isFileAtPathEmpty:(NSString *)filePath;
+
 - (long long)freeMemorySpace;
 
 
@@ -28,5 +33,7 @@
 
 - (NSString *)MD5ForFileAtPath:(NSString *)path;
 - (NSString *)MD5ForFileAtURL:(NSURL *)URL;
+
+- (NSUInteger)sizeOfFileAtPath:(NSString *)filePath;
 
 @end
