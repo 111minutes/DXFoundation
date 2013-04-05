@@ -24,7 +24,7 @@
     return [self shared];
 }
 
-
+#pragma mark -
 #pragma mark - Helpers
 
 - (long long)freeMemorySpace
@@ -44,6 +44,21 @@
 - (NSString *)pathToCacheDirectory
 {
     return [self pathToDir:NSCachesDirectory];
+}
+
+- (NSString *)documentsDirectoryPathWithPathComponent:(NSString *)path
+{
+    return [[self pathToDocumentsDirectory] stringByAppendingPathComponent:path];
+}
+
+- (NSString *)cachesDirectoryPathWithPathComponent:(NSString *)path
+{
+    return [[self pathToCacheDirectory] stringByAppendingPathComponent:path];
+}
+
+- (NSString *)tempDirectoryPathWithPathComponent:(NSString *)path
+{
+    return [NSTemporaryDirectory() stringByAppendingPathComponent:path];
 }
 
 - (NSString *)pathToDir:(NSSearchPathDirectory)aPathDirectory
@@ -66,6 +81,8 @@
     return pathToDir;
 }
 
+
+#pragma mark -
 #pragma mark - iCloud sync
 
 - (BOOL)skipSync:(BOOL)skip forItemAtUrl:(NSURL *)URL error:(NSError**)error
@@ -95,6 +112,7 @@
 }
 
 
+#pragma mark -
 #pragma mark - File MD5
 
 - (NSString *)MD5ForFileAtPath:(NSString *)path
@@ -225,6 +243,22 @@
     if (successBlock) {
         successBlock(fileURL, md5String);
     }
+}
+
+
+#pragma mark -
+#pragma mark - File attributes
+
+- (NSUInteger)sizeOfFileAtPath:(NSString *)filePath
+{
+    NSNumber *fileSize = [[self attributesOfItemAtPath:filePath error:nil] objectForKey:NSFileSize];
+    
+    return [fileSize unsignedIntegerValue];
+}
+
+- (BOOL)isFileAtPathEmpty:(NSString *)filePath
+{    
+    return [self sizeOfFileAtPath:filePath] == 0;
 }
 
 @end

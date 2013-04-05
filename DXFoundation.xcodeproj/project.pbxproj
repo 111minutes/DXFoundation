@@ -18,9 +18,10 @@
 		AD8096B615CC1318004BE9EC /* DXSingletonHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */; };
 		AD8096B815CC131B004BE9EC /* NSObject+DXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */; };
 		AD8FF66215CBF53500BFB572 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD8FF66115CBF53500BFB572 /* Foundation.framework */; };
-		AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = AD8FF66615CBF53500BFB572 /* DXFoundation.h */; };
 		AD8FF67815CBF5EB00BFB572 /* NSObject+DXSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */; };
 		AD8FF67B15CBF6DA00BFB572 /* DXSingletonHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */; };
+		BC409D00170ED9D5002D6F63 /* DXFoundationDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = BC409CFF170ED9D5002D6F63 /* DXFoundationDefines.m */; };
+		BC409D01170ED9D5002D6F63 /* DXFoundationDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = BC409CFF170ED9D5002D6F63 /* DXFoundationDefines.m */; };
 		BC54312016022A0900636164 /* DXDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54311F16022A0900636164 /* DXDateFormatter.m */; };
 		BC54312416022E6600636164 /* DXNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = BC54312316022E6600636164 /* DXNumberFormatter.m */; };
 		BC58A96C162DB9EF0049DF7E /* DXFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BC58A96B162DB9EF0049DF7E /* DXFileManager.m */; };
@@ -43,7 +44,6 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				AD8FF66715CBF53500BFB572 /* DXFoundation.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,11 +66,13 @@
 		AD8FF65E15CBF53500BFB572 /* libDXFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDXFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8FF66115CBF53500BFB572 /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD8FF66515CBF53500BFB572 /* DXFoundation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXFoundation-Prefix.pch"; sourceTree = "<group>"; };
-		AD8FF66615CBF53500BFB572 /* DXFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DXFoundation.h; sourceTree = "<group>"; };
 		AD8FF67015CBF55E00BFB572 /* DXSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingleton.h; sourceTree = "<group>"; };
 		AD8FF67715CBF5EB00BFB572 /* NSObject+DXSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DXSingleton.m"; sourceTree = "<group>"; };
 		AD8FF67915CBF6DA00BFB572 /* DXSingletonHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXSingletonHolder.h; sourceTree = "<group>"; };
 		AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXSingletonHolder.m; sourceTree = "<group>"; };
+		BC409CFD170ED9B2002D6F63 /* DXFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXFoundation.h; sourceTree = "<group>"; };
+		BC409CFE170ED9D5002D6F63 /* DXFoundationDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXFoundationDefines.h; sourceTree = "<group>"; };
+		BC409CFF170ED9D5002D6F63 /* DXFoundationDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXFoundationDefines.m; sourceTree = "<group>"; };
 		BC54311E16022A0900636164 /* DXDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXDateFormatter.h; sourceTree = "<group>"; };
 		BC54311F16022A0900636164 /* DXDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DXDateFormatter.m; sourceTree = "<group>"; };
 		BC54312216022E6600636164 /* DXNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DXNumberFormatter.h; sourceTree = "<group>"; };
@@ -211,13 +213,13 @@
 		AD8FF66315CBF53500BFB572 /* DXFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				BC409CFC170ED9B2002D6F63 /* DXFoundationBase */,
 				BC58A968162DB9DD0049DF7E /* DXFileManager */,
 				BCCE19C21603192B003D3D7D /* DXCalendar */,
 				BC54312116022E4700636164 /* DXNumberFormatter */,
 				BC54311C160229EE00636164 /* DXDateFormatter */,
 				AD744F3B15CD3D38004B875B /* DXKVO */,
 				AD8FF66F15CBF54700BFB572 /* DXSingleton */,
-				AD8FF66615CBF53500BFB572 /* DXFoundation.h */,
 				AD8FF66415CBF53500BFB572 /* Supporting Files */,
 			);
 			path = DXFoundation;
@@ -240,6 +242,16 @@
 				AD8FF67A15CBF6DA00BFB572 /* DXSingletonHolder.m */,
 			);
 			path = DXSingleton;
+			sourceTree = "<group>";
+		};
+		BC409CFC170ED9B2002D6F63 /* DXFoundationBase */ = {
+			isa = PBXGroup;
+			children = (
+				BC409CFD170ED9B2002D6F63 /* DXFoundation.h */,
+				BC409CFE170ED9D5002D6F63 /* DXFoundationDefines.h */,
+				BC409CFF170ED9D5002D6F63 /* DXFoundationDefines.m */,
+			);
+			path = DXFoundationBase;
 			sourceTree = "<group>";
 		};
 		BC54311C160229EE00636164 /* DXDateFormatter */ = {
@@ -456,6 +468,7 @@
 				AD8096B815CC131B004BE9EC /* NSObject+DXSingleton.m in Sources */,
 				AD744F4015CD3D6F004B875B /* DXKVOHandler.m in Sources */,
 				AD744F4415CD3D7B004B875B /* NSObject+DXKVO.m in Sources */,
+				BC409D01170ED9D5002D6F63 /* DXFoundationDefines.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +484,7 @@
 				BC54312416022E6600636164 /* DXNumberFormatter.m in Sources */,
 				BCCE19C516031941003D3D7D /* DXCalendar.m in Sources */,
 				BC58A96C162DB9EF0049DF7E /* DXFileManager.m in Sources */,
+				BC409D00170ED9D5002D6F63 /* DXFoundationDefines.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
