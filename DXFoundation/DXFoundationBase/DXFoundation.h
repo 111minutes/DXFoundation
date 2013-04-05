@@ -12,4 +12,5 @@
 #import "DXNumberFormatter.h"
 #import "DXDateFormatter.h"
 #import "DXFileManager.h"
+#import "NSObject+DXKVO.h"
 #import "DXFoundationDefines.h"
